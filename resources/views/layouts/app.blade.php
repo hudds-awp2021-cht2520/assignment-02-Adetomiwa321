@@ -14,16 +14,18 @@
             <h1>Sign It!</h1>
 		</div>
         </section>
+        
+        <ul class="navbar">
+    <li><a href="/">Home</a></li>                
+    @if (Auth::guest())
+        <li><a href="/login">Login</a></li>
+    @else 
+        <li><a href="/visitors">Visitors</a></li>
+        <li><a href="/visitors/create">Sign the guestbook</a></li>
+    @endif
+</ul>
 
-        <section class="navigation">
-		<div class="container mx-auto">
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/products">Products</a></li>
-                <li><a href="/products/create">Add product</a></li>
-            </ul>
-		</div>
-        </section>
+        
 
         <section class="pageTitle">
 		<div class="container mx-auto">
