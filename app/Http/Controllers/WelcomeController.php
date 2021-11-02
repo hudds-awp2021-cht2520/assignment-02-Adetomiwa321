@@ -9,11 +9,6 @@ class WelcomeController extends Controller
 {
     public function index()
     {
-        $products = Product::all();
-        
-        return view('welcome', [
-        'title' => 'Our products',
-        'products' => $products     
-    ]);
+        return view('welcome');
 }
 }
