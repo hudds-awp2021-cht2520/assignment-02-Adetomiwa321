@@ -10,8 +10,18 @@ class ProductSeeder extends Seeder
  
     public function run()
     {
-        Product::factory()            
-        ->count(14)            
-        ->create();
+        Product::create([
+            'name' => 'Nike React Flyknit',
+            'price' => '£20',
+            'user_id' =>  '1'
+
+        ]);
+
+        Product::create([
+            'name' => 'Nike Air Force 1',
+            'price' => '£60',
+            'user_id' =>  '1'
+
+        ]);
     }
 }

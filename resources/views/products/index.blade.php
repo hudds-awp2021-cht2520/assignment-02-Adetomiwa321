@@ -15,15 +15,17 @@
 
             <p>{{ $product->price }}</p>
 
-            <form action="{{ route('products.destroy', $product->id) }}" method="POST">
-                <a class="btn btn-blue" href="{{ route('products.show', $product->id) }}">Show</a>
-                <a class="btn btn-blue" href="{{ route('products.edit', $product->id) }}">Edit</a>
+            @if (Auth::user() && Auth::user()->id === $product->user_id)
+                <form action="{{ route('products.destroy', $product->id) }}" method="POST">
+                    <a class="btn btn-blue" href="{{ route('products.show', $product->id) }}">Show</a>
+                    <a class="btn btn-blue" href="{{ route('products.edit', $product->id) }}">Edit</a>
 
-                @csrf
-                @method('DELETE')
+                    @csrf
+                    @method('DELETE')
 
-                <button type="submit" class="btn btn-red">Delete</button>
-            </form>
+                    <button type="submit" class="btn btn-red">Delete</button>
+                </form>
+            @endif
         </article>
     @endforeach
 

@@ -1,20 +1,20 @@
 @extends('layouts.app')
 
-@section('title', 'Edit signing')
+@section('title', 'Edit product')
 
 @section('content')
     <form action="{{ route('products.update', $product->id) }}" method="POST">
         @csrf
         @method('PUT')
-
         <div class="my-10">
             <label for="name">Name:</label>
-            <input type="text" name="name" id="name" value="{{ $product->name }}" class=" p-2 bg-gray-200 @error('name') is-invalid @enderror" />
-
+            <input type="text" name="name" id="name" value="{{$product->name }}" class="p-2 bg-gray-200 @error('name') is-invalid @enderror" />
             @error('name')
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror
         </div>
+
+        
 
         <div class="my-10">
             <label for="price">Price:</label>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
 {
@@ -43,13 +44,18 @@ return view('products/index', [
     {
         $request->validate([
             'name' => 'required',
-            'comments' => 'required'
-            ]);
+            'price' => 'required'
+        ]);
+    
+        $product = new Product;
+        $product->user()->associate(Auth::user());
+        $product->name = $request->name;
+        $product->price = $request->price;
+        $product->save();
             
-            Product::create($request->all());
-            
-            return redirect()->route('products.index')
-            ->with('success', 'Signing created successfully.');
+        return redirect()->route('products.index')
+            ->with('success','Product created successfully.');
+    
             
     }
 
@@ -92,13 +98,16 @@ return view('products/index', [
     {
         $request->validate([
             'name' => 'required',
-            'comments' => 'required'
+            'price' => 'required'
         ]);
 
-        $product->update($request->all());
-
+        $product->name = $request->name;
+        $product->price = $request->price;
+        $product->save();
+    
         return redirect()->route('products.index')
-            ->with('success', 'Signing updated successfully');
+            ->with('success', 'Product updated successfully');
+    
 
     }
 
