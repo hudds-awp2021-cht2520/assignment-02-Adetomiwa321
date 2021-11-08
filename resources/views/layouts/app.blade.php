@@ -22,6 +22,7 @@
     @else 
         <li><a href="/products">Products</a></li>
         <li><a href="/products/create">Add a new product</a></li>
+        <li><a href="/register">Add a new user</a></li>
         <li><a href="/logout">Logout</a></li>
     @endif
 </ul>
