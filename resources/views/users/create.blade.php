@@ -23,7 +23,7 @@
             @enderror
         </div>
            
-        
+         
         <div class="my-10">
             <label for="password">Password:</label>
             <input type="text" name="password" id="password" class="p-2 bg-gray-200 @error('password') is-invalid @enderror" />

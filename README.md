@@ -1,65 +1,82 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Project Title - SneakStore
+## Project Description
+The application is a sneaker store which essentially provides users with an alternative and user-friendly app for them to interact with. 
+The main goal of the application is to allow users to create a registered account and then able to login with account created. Then, they now have access to products, and they can log out after viewing the products. 
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+### Technologies used within the creation of the application 
+- **[Laravel, Vs Code, git-bash, PHP, Node Js, Xampp, Github, MySql.]**
 
-## About Laravel
+### Features used within the creation of the application
+- **[I have implemented the use of the create, read, update and delete function, I have also added user authentication which require the use of login to enter the website. I have also made use of databases with CRUD operations on storing in the database. ]**
+- **[I have included the feature of linking together the user and products table together and this can be identified by the user id on products table.]**
+- **[I have used the “php artisan migrate” command to create multiple migrations when needed to get data into the tables of the database.]**
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Project Installation 
+Open the development environment which would host PHP and MySQL and ensure that the packages are able to run. Also ensuring that you can run a webserver on your computer:
+Within the development environment, launch the terminal and copy this command to install composer”  php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"php -r "if (hash_file('sha384', 'composer-setup.php') === '906a84df04cea2aa72f40b5f787e49f22d4c2f19492ac310e8cba5b96ac8b64115ac402c8cd292b8a03482574915d1a8') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+php composer-setup.php
+php -r "unlink('composer-setup.php');"  “
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+- **[You can then start your instance web server and then open the terminal and run this command to launch the git-bash terminal. From the root of your project “E:/git/git-bash.exe”.**
+- **[Then run this command in the terminal “php composer.phar”]**
+- **[Clone the git repository using the command “git clone git@github.com:hudds-awp2021-cht2520/assignment-01-Adetomiwa321.git”]**
+- **[To switch to the repo folder, use this command “cd assignment-01-Adetomiwa321”]**
+- **[From here you would install Laravel using the command “../../composer.phar create-project laravel/laravel .”]**
+- **[From the control panel, configure the webserver to point at the /public directory.]**
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Setting up the database
+- **[From your MySQL instance, you can create a new user account.]**
+- **[Creating a new user account with a username and a password.]**
+- **[Ensuring you select ‘Create database with same name and grant all privileges’.]**
+- **[Then click ‘Go’. ]**
+- **[In the server terminal execute the following command “mysql -u exe -p exe”. This says login into MySql as a user exe created in your database and connect to the database exe created with the same name. Then fill in the password with the one created for the user account.]**
+- **[With the code editor you can edit the .env file make changes so that the db_database, db_username and db_password so that it matches the details for the account set up on MySql. ]**
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Installing dev tools node.js and npm 
+•	Go to https://nodejs.org/dist/latest-v16.x/ and download the file called node-v16.11.0-win-x64.zip.
+•	Unzip the contents of the file to E:\node\, where your USB stick is mounted at drive D:.
+•	From the development environment terminal, add node to your path with this command (where your USB drive is mapped at drive letter E:): “set PATH=D:\node;%PATH%”
+•	Run this command from the git-bash command line: “node -v” and then: “npm -v”, this would display the version numbers of both packages.
+•	When you have generated controllers and edited the CRUD data in the controller you can then use this command to build your asset. From the root of your project in git-bash use this command “npm run dev”
+•	If this fails try deleting node_modules and package.lock then run: “npm install”, Then: “npm run dev”
+Project Usage
+Create – this function is used within the website when the admin is logged in and they can create a new item within the website. Using the ‘add a new product’ button this allows for adding new information to be inserted into the site.
+ 
+ 
+Read – this function is used within the app to get the details of a particular item and enhance the details of the item and its other description. 
+ 
+Update – this function is used to update the products displayed by editing a newly created products which shows the edit page and the current details which can then be edited and updated into another item.
+ 
+ 
 
-## Laravel Sponsors
+Delete – this function is used to delete a product unwanted from the product page and then removing this from the website. 
+ 
+Login – this function on the site requires the user to use the correct login details to enter the site. The user will be prompted to enter details into this page if they haven’t already. 
+ 
+ 
+ 
+Logout – this function would enable the user to logout of the site and be redirected to the login page with a prompt message referring to them logout. And then prompted to login again. 
+ 
+Registration – this function would enable the user to create a new user with information to be used within the login page to ensure they are a registered user. They will be prompted to fill in all the fields with information.
+ 
+## Project testing 
+I have run tests on the get function of the CRUD operations. 
+The code “php artisan test” can be used to run test, this was used to run the get function within my application. This then ensured the get function which retrieves the products within my application was working.
+ 
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## Running php artisan commands
+php artisan make:migration create_visitors_table – this allows the user to create a database migration which can be filled in with data that can be seen on the MySql database.
+php artisan migrate – this command can be used to after creating new migrations to ensure that they all run and then you can specify which ones to run if they haven’t. this will create a database table with schema made within the “create_visitors_table” migration. 
+php artisan migrate:refresh – this allows for the refresh of migrations and edits out deleted migrations and ensure you have a clean database.
+php artisan make:model Visitor – this will generate a model called visitor
+php artisan make:controller VisitorController --resource --model=Visitor – this will generate a new controller which will include the CRUD operations for the user to input data on how it would work.
+php artisan db:seed – this enables you to seed the database with data which you have created and creating relations within the database.
 
-### Premium Partners
+## Future Improvements 
+For further improvement to the website, I would have created a separate JSON file to input the data into the database.
+I would also have created more tables to and ensure there are more columns within them to increase complexity of the site.
+I would have completed more test on the project and ensure the controllers and other CRUD functions are working. 
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
